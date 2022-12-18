@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import React from "react";
+import Gallery from "./Components/Gallery";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Components/Home";
+import Contact from "./Components/Contact";
+import Nav from "./Components/Nav";
 function App() {
+  /*
+  const handleClick = () => {
+    let docStyle = document.body.style;
+    if (docStyle.backgroundColor === "black") {
+      docStyle.backgroundColor = "white";
+    }
+    docStyle.backgroundColor = "black";
+  };
+  */
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </div>
   );
 }
