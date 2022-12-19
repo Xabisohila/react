@@ -13,6 +13,7 @@ function Nav() {
               <Logo />
             </Link>
           </li>
+          x
           <li>
             <Link to="/gallery">Gallery</Link>
           </li>
