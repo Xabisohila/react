@@ -47,4 +47,5 @@ button:hover {
   align-items: center;
   display: flex;
   border: none;
+  justify-content: space-around;
 }

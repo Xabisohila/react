@@ -18,6 +18,7 @@ function Gallery() {
 
   return (
     <section>
+      {" "}
       <button onClick={handleClick}>Next</button>
       <h2>
         <i>{sculpture.name}</i> by {sculpture.artist}
@@ -26,7 +27,6 @@ function Gallery() {
         ({index + 1} of {sculptureList.length})
       </h3>
       <br />
-
       <button onClick={handleMoreClick}>
         {showMore ? "Hide" : "Show"} details
       </button>
